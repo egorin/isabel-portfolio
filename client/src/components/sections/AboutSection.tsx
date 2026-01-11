@@ -1,0 +1,140 @@
+/**
+ * About Section - Arizona Sunset Theme
+ * Warm rose, peach, and soft gold gradients
+ * Personal bio and introduction
+ */
+
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+
+export default function AboutSection() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+  return (
+    <section
+      id="about"
+      ref={ref}
+      className="relative min-h-screen py-24 overflow-hidden"
+      style={{
+        background: "linear-gradient(180deg, #FFB5BA 0%, #FFDAB9 30%, #FFE4B5 60%, #87CEEB 100%)"
+      }}
+    >
+      {/* Decorative Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Soft glowing orbs */}
+        <div className="absolute top-20 left-10 w-64 h-64 rounded-full bg-white/20 blur-3xl" />
+        <div className="absolute bottom-40 right-20 w-96 h-96 rounded-full bg-[#FFE4B5]/30 blur-3xl" />
+        <div className="absolute top-1/2 left-1/3 w-48 h-48 rounded-full bg-[#FFDAB9]/40 blur-2xl" />
+      </div>
+
+      <div className="container relative z-10">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-[#5D3A3A] mb-6">
+            About Me
+          </h2>
+          <div className="w-24 h-1 bg-[#C65D3B]/60 mx-auto rounded-full" />
+        </motion.div>
+
+        {/* Content Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-6xl mx-auto">
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative flex justify-center"
+          >
+            <div className="relative">
+              {/* Glow effect behind image */}
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FFB5BA] to-[#FFE4B5] rounded-full blur-2xl opacity-60 scale-110" />
+              
+              {/* Profile placeholder with glass frame */}
+              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden glass-card p-2">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-[#FFDAB9] to-[#FFB5BA] flex items-center justify-center">
+                  <div className="text-center text-[#5D3A3A]/70">
+                    <svg className="w-24 h-24 mx-auto mb-2 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    <p className="font-accent text-sm">Photo Coming Soon</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative ring */}
+              <div className="absolute -inset-4 border-2 border-white/30 rounded-full" />
+            </div>
+          </motion.div>
+
+          {/* Bio Content */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="space-y-6"
+          >
+            <div className="glass-card p-8 md:p-10">
+              <h3 className="font-display text-2xl md:text-3xl font-semibold text-[#5D3A3A] mb-6">
+                Hello, I'm Isabel
+              </h3>
+              
+              <div className="space-y-4 font-body text-[#5D3A3A]/90 leading-relaxed">
+                <p>
+                  I'm a senior at the Arizona School for the Arts, where I've spent the past four years 
+                  exploring the intersection of creativity, leadership, and academic excellence. My journey 
+                  has been defined by a passion for making meaningful change—whether through the arts, 
+                  civic engagement, or environmental advocacy.
+                </p>
+                
+                <p>
+                  As someone who believes deeply in the power of interdisciplinary thinking, I've found 
+                  ways to connect my love for music and visual arts with my commitment to addressing 
+                  pressing global challenges. My Senior Capstone project on AI sustainability represents 
+                  this synthesis—examining how emerging technology intersects with environmental responsibility.
+                </p>
+                
+                <p>
+                  Beyond academics, I've had the privilege of leading initiatives that bring communities 
+                  together, from directing HeartBeats to representing my school as an ASA Ambassador. 
+                  Each experience has shaped my understanding of what it means to be both an artist and 
+                  an advocate.
+                </p>
+              </div>
+
+              {/* Quick Stats */}
+              <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-[#C65D3B]/20">
+                <div className="text-center">
+                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">4+</p>
+                  <p className="font-accent text-sm text-[#5D3A3A]/70">Years at ASA</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">5+</p>
+                  <p className="font-accent text-sm text-[#5D3A3A]/70">Leadership Roles</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">∞</p>
+                  <p className="font-accent text-sm text-[#5D3A3A]/70">Curiosity</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Transition to next section - gradient fade */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-48"
+        style={{
+          background: "linear-gradient(180deg, transparent 0%, #87CEEB 100%)"
+        }}
+      />
+    </section>
+  );
+}

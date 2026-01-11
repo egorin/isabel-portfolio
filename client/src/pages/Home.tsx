@@ -1,25 +1,79 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * Isabel Gorin Portfolio - Single Page Scrolling Website
+ * Design: Celestial Journey - Ethereal Glassmorphism
+ * Three sections: Sunset (About) → Day (Capstone) → Night (Extracurriculars)
  */
+
+import { useEffect, useRef, useState } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import LandingSection from "@/components/sections/LandingSection";
+import AboutSection from "@/components/sections/AboutSection";
+import CapstoneSection from "@/components/sections/CapstoneSection";
+import ExtracurricularSection from "@/components/sections/ExtracurricularSection";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [hasEntered, setHasEntered] = useState(false);
+  const [activeSection, setActiveSection] = useState("landing");
+  const containerRef = useRef<HTMLDivElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
+
+  // Track active section based on scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ["about", "capstone", "extracurricular"];
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      
+      for (const section of sections) {
+        const element = document.getElementById(section);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(section);
+            break;
+          }
+        }
+      }
+    };
+
+    if (hasEntered) {
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [hasEntered]);
+
+  const handleEnter = () => {
+    setHasEntered(true);
+    setTimeout(() => {
+      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div ref={containerRef} className="relative">
+      <AnimatePresence mode="wait">
+        {!hasEntered ? (
+          <LandingSection key="landing" onEnter={handleEnter} />
+        ) : (
+          <motion.div
+            key="main"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <Navigation activeSection={activeSection} />
+            <AboutSection />
+            <CapstoneSection />
+            <ExtracurricularSection />
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
