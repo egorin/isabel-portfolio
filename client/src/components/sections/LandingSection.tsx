@@ -22,7 +22,7 @@ export default function LandingSection({ onEnter }: LandingSectionProps) {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-sunset.png')" }}
+        style={{ backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663078358779/iVDZnBrnPVCThAXQ.png')" }}
       />
       
       {/* Gradient Overlay */}

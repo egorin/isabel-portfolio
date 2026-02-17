@@ -21,6 +21,34 @@ export default function AboutSection() {
         background: "linear-gradient(180deg, #FFB5BA 0%, #FFDAB9 30%, #FFE4B5 60%, #87CEEB 100%)"
       }}
     >
+      {/* Floating Particles Animation */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute rounded-full bg-white shadow-lg"
+            style={{
+              width: 3 + Math.random() * 4,
+              height: 3 + Math.random() * 4,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              boxShadow: "0 0 10px rgba(255, 255, 255, 0.6)"
+            }}
+            animate={{
+              y: [0, -50, 0],
+              x: [0, Math.random() * 30 - 15, 0],
+              opacity: [0.4, 0.9, 0.4],
+            }}
+            transition={{
+              duration: 6 + Math.random() * 3,
+              repeat: Infinity,
+              delay: Math.random() * 2,
+              ease: "easeInOut"
+            }}
+          />
+        ))}
+      </div>
+
       {/* Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Soft glowing orbs */}

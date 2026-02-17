@@ -7,7 +7,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { FileText, Download, ExternalLink, Leaf, Cpu, Droplets, Zap } from "lucide-react";
+import { FileText, Download, ExternalLink, Leaf, Cpu, Droplets, Zap, Music } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 
@@ -48,7 +48,7 @@ export default function CapstoneSection() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/hero-frutiger.png')" }}
+        style={{ backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663078358779/vDborPuqRgbUoNNh.png')" }}
       />
       
       {/* Light overlay for readability */}
@@ -56,29 +56,36 @@ export default function CapstoneSection() {
 
       {/* Floating bubbles decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute rounded-full"
-            style={{
-              width: 40 + Math.random() * 60,
-              height: 40 + Math.random() * 60,
-              left: `${10 + Math.random() * 80}%`,
-              top: `${10 + Math.random() * 80}%`,
-              background: "linear-gradient(135deg, rgba(135, 206, 235, 0.4) 0%, rgba(152, 255, 152, 0.3) 100%)",
-              border: "1px solid rgba(255, 255, 255, 0.5)",
-            }}
-            animate={{
-              y: [0, -20, 0],
-              scale: [1, 1.05, 1],
-            }}
-            transition={{
-              duration: 4 + Math.random() * 2,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+        {[...Array(12)].map((_, i) => {
+          const size = 50 + Math.random() * 80;
+          return (
+            <motion.div
+              key={i}
+              className="absolute rounded-full"
+              style={{
+                width: size,
+                height: size,
+                left: `${10 + Math.random() * 80}%`,
+                top: `${10 + Math.random() * 80}%`,
+                background: `radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8) 0%, rgba(135, 206, 235, 0.4) 30%, rgba(100, 180, 220, 0.2) 100%)`,
+                border: "2px solid rgba(255, 255, 255, 0.6)",
+                boxShadow: `inset -10px -10px 20px rgba(255, 255, 255, 0.3), inset 10px 10px 20px rgba(100, 180, 220, 0.2), 0 8px 20px rgba(135, 206, 235, 0.3)`,
+              }}
+              animate={{
+                y: [0, -40, 0],
+                x: [0, Math.random() * 20 - 10, 0],
+                scale: [1, 1.08, 1],
+                opacity: [0.5, 0.8, 0.5],
+              }}
+              transition={{
+                duration: 7 + Math.random() * 4,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "easeInOut"
+              }}
+            />
+          );
+        })}
       </div>
 
       <div className="container relative z-10">
@@ -164,8 +171,9 @@ export default function CapstoneSection() {
 
               {/* Visual */}
               <div className="relative">
+                {/* EDITABLE: Replace this CDN URL with your own image */}
                 <img 
-                  src="/images/ai-sustainability.png" 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663078358779/HmHVloUHZvIGKORg.png" 
                   alt="AI and Sustainability Visualization"
                   className="w-full rounded-2xl shadow-lg"
                 />
@@ -207,7 +215,7 @@ export default function CapstoneSection() {
             </div>
           </motion.div>
 
-          {/* Creative Companion Piece Placeholder */}
+          {/* Creative Companion Piece */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -215,18 +223,64 @@ export default function CapstoneSection() {
             className="mt-12"
           >
             <div 
-              className="glass-card p-8 text-center"
-              style={{ background: "rgba(255, 255, 255, 0.8)" }}
+              className="glass-card p-8 md:p-12"
+              style={{ background: "rgba(255, 255, 255, 0.85)" }}
             >
-              <h4 className="font-display text-xl font-semibold text-[#1565C0] mb-3">
-                Creative Companion Piece
-              </h4>
-              <p className="font-body text-[#37474F] mb-4">
-                A picture book or song exploring the themes of AI and environmental sustainability
-              </p>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#87CEEB]/20 text-[#1565C0] font-accent text-sm">
-                <ExternalLink className="w-4 h-4" />
-                Coming Soon
+              <div className="grid lg:grid-cols-2 gap-8 items-center">
+                {/* Text Content */}
+                <div>
+                  <h3 className="font-display text-2xl md:text-3xl font-semibold text-[#1565C0] mb-4">
+                    Creative Companion Piece
+                  </h3>
+                  <p className="font-body text-[#37474F] leading-relaxed mb-6">
+                    A picture book or song exploring the themes of AI and environmental sustainability
+                  </p>
+                  
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button 
+                        size="lg"
+                        className="bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-accent text-base px-8 py-6"
+                      >
+                        <Music className="w-5 h-5 mr-2" />
+                        Listen Now
+                      </Button>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-md">
+                      <DialogHeader>
+                        <DialogTitle className="font-display text-xl">
+                          Creative Companion Piece
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className="space-y-4">
+                        <p className="text-sm text-muted-foreground">
+                          Audio file coming soon. Replace the src below with your audio file path.
+                        </p>
+                        <audio 
+                          controls 
+                          className="w-full"
+                          src="/audio/companion-piece.mp3"
+                        >
+                          Your browser does not support the audio element.
+                        </audio>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </div>
+
+                {/* Image Placeholder */}
+                <div className="relative">
+                  <div 
+                    className="w-full rounded-2xl shadow-lg flex items-center justify-center text-center p-8"
+                    style={{ background: "linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)", aspectRatio: "4/3" }}
+                  >
+                    <div>
+                      <p className="font-display text-xl text-[#2E7D32] mb-2">Companion Piece Image</p>
+                      <p className="font-body text-sm text-[#558B2F]">Replace /images/companion-piece-placeholder.png with your image</p>
+                    </div>
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-[#98FF98] to-[#87CEEB] rounded-full opacity-50 blur-xl" />
+                </div>
               </div>
             </div>
           </motion.div>

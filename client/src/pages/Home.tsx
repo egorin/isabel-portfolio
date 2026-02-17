@@ -13,6 +13,7 @@ import ExtracurricularSection from "@/components/sections/ExtracurricularSection
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
+
 export default function Home() {
   const [hasEntered, setHasEntered] = useState(false);
   const [activeSection, setActiveSection] = useState("landing");
@@ -56,6 +57,7 @@ export default function Home() {
 
   return (
     <div ref={containerRef} className="relative">
+
       <AnimatePresence mode="wait">
         {!hasEntered ? (
           <LandingSection key="landing" onEnter={handleEnter} />

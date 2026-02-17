@@ -125,30 +125,37 @@ export default function ExtracurricularSection() {
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60"
-        style={{ backgroundImage: "url('/images/hero-space.png')" }}
+        style={{ backgroundImage: "url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663078358779/KzRFiJRLZUlFDoVP.png')" }}
       />
 
       {/* Twinkling Stars */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(50)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 rounded-full bg-white"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              opacity: [0.3, 1, 0.3],
-              scale: [1, 1.2, 1],
-            }}
-            transition={{
-              duration: 2 + Math.random() * 3,
-              repeat: Infinity,
-              delay: Math.random() * 2,
-            }}
-          />
-        ))}
+        {[...Array(100)].map((_, i) => {
+          const size = 1 + Math.random() * 2;
+          return (
+            <motion.div
+              key={i}
+              className="absolute rounded-full bg-white"
+              style={{
+                width: size,
+                height: size,
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                boxShadow: `0 0 ${size * 3}px rgba(255, 255, 255, 0.8)`
+              }}
+              animate={{
+                opacity: [0.3, 1, 0.3],
+                scale: [1, 1.4, 1],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 3,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+                ease: "easeInOut"
+              }}
+            />
+          );
+        })}
       </div>
 
       {/* Nebula glow effects */}
@@ -202,7 +209,7 @@ export default function ExtracurricularSection() {
         </motion.div>
 
         {/* Activities Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {filteredActivities.map((activity, index) => (
             <motion.div
               key={activity.id}
@@ -213,31 +220,35 @@ export default function ExtracurricularSection() {
               <Dialog>
                 <DialogTrigger asChild>
                   <button
-                    className="w-full text-left glass-card-dark p-6 hover:scale-105 transition-all duration-300 group"
+                    className="w-full h-full text-left glass-card-dark p-8 hover:scale-105 transition-all duration-300 group flex flex-col"
                     onClick={() => setSelectedActivity(activity)}
                   >
-                    {/* Icon */}
-                    <div className={`w-12 h-12 rounded-xl mb-4 flex items-center justify-center ${
-                      activity.category === "leadership" 
-                        ? "bg-gradient-to-br from-[#00FFFF]/30 to-[#00FFFF]/10" 
-                        : "bg-gradient-to-br from-[#FF10F0]/30 to-[#FF10F0]/10"
-                    }`}>
-                      <activity.icon className={`w-6 h-6 ${
-                        activity.category === "leadership" ? "text-[#00FFFF]" : "text-[#FF10F0]"
-                      }`} />
+                    {/* Icon and Title */}
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className={`w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                        activity.category === "leadership" 
+                          ? "bg-gradient-to-br from-[#00FFFF]/30 to-[#00FFFF]/10" 
+                          : "bg-gradient-to-br from-[#FF10F0]/30 to-[#FF10F0]/10"
+                      }`}>
+                        <activity.icon className={`w-6 h-6 ${
+                          activity.category === "leadership" ? "text-[#00FFFF]" : "text-[#FF10F0]"
+                        }`} />
+                      </div>
+                      <h3 className="font-display text-lg font-semibold text-white group-hover:text-[#00FFFF] transition-colors">
+                        {activity.title}
+                      </h3>
                     </div>
 
                     {/* Content */}
-                    <h3 className="font-display text-lg font-semibold text-white mb-2 group-hover:text-[#00FFFF] transition-colors">
-                      {activity.title}
-                    </h3>
-                    <p className="font-body text-sm text-white/60 mb-4">
-                      {activity.shortDesc}
-                    </p>
+                    <div className="flex-1 flex flex-col">
+                      <p className="font-body text-sm text-white/60 mb-4 flex-1">
+                        {activity.shortDesc}
+                      </p>
 
-                    {/* View More */}
-                    <div className="flex items-center gap-1 text-[#00FFFF] font-accent text-sm opacity-0 group-hover:opacity-100 transition-opacity">
-                      Learn More <ChevronRight className="w-4 h-4" />
+                      {/* View More */}
+                      <div className="flex items-center gap-1 text-[#00FFFF] font-accent text-sm opacity-0 group-hover:opacity-100 transition-opacity">
+                        Learn More <ChevronRight className="w-4 h-4" />
+                      </div>
                     </div>
                   </button>
                 </DialogTrigger>
@@ -259,6 +270,18 @@ export default function ExtracurricularSection() {
                   </DialogHeader>
                   
                   <div className="space-y-4">
+                    {/* Image Placeholder */}
+                    <div 
+                      className="w-full aspect-video rounded-xl flex items-center justify-center text-center p-6"
+                      style={{ background: "linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 16, 240, 0.1) 100%)" }}
+                    >
+                      <div>
+                        <Palette className="w-8 h-8 mx-auto mb-2 text-white/40" />
+                        <p className="font-body text-sm text-white/50">Activity Image</p>
+                        <p className="font-body text-xs text-white/30">Add image for {activity.title}</p>
+                      </div>
+                    </div>
+
                     <p className="font-body text-white/80 leading-relaxed">
                       {activity.fullDesc}
                     </p>
@@ -291,41 +314,7 @@ export default function ExtracurricularSection() {
           ))}
         </div>
 
-        {/* Special Feature: Global Science Opera */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-16 max-w-4xl mx-auto"
-        >
-          <div className="glass-card-dark p-8 md:p-12 relative overflow-hidden">
-            {/* Decorative stars */}
-            <Star className="absolute top-4 right-4 w-6 h-6 text-[#00FFFF]/30" />
-            <Star className="absolute bottom-8 left-8 w-4 h-4 text-[#FF10F0]/30" />
-            
-            <div className="text-center">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#00FFFF]/20 to-[#FF10F0]/20 mb-6">
-                <Globe className="w-4 h-4 text-[#00FFFF]" />
-                <span className="font-accent text-sm text-white/80">Featured Project</span>
-              </div>
-              
-              <h3 className="font-display text-3xl md:text-4xl font-semibold text-white mb-4">
-                Global Science Opera
-              </h3>
-              
-              <p className="font-body text-white/70 max-w-2xl mx-auto mb-6 leading-relaxed">
-                A groundbreaking international collaboration that brings together students from around 
-                the world to create operatic works inspired by scientific themes. This project represents 
-                the beautiful intersection of art, science, and global community.
-              </p>
-              
-              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/10 text-white/60 font-accent">
-                <ExternalLink className="w-4 h-4" />
-                Project documentation coming soon
-              </div>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   );
