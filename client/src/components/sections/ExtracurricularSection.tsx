@@ -23,44 +23,19 @@ interface Activity {
   highlights?: string[];
   mediaPlaceholder?: boolean;
   link?: string;
+  linkLabel?: string;
+  extraContent?: React.ReactNode;
 }
 
 const activities: Activity[] = [
-  {
-    id: "model-un",
-    title: "Model United Nations",
-    category: "leadership",
-    icon: Globe,
-    shortDesc: "Diplomatic excellence and global awareness",
-    fullDesc: "As an active participant in Model UN, I've developed skills in diplomacy, public speaking, and international relations. Through conference participation and position paper writing, I've gained deep insights into global issues and the complexities of international cooperation.",
-    highlights: ["Conference Awards", "Position Papers", "Diplomatic Skills"]
-  },
-  {
-    id: "heartbeats",
-    title: "HeartBeats Director",
-    category: "leadership",
-    icon: Heart,
-    shortDesc: "Leading a community music initiative",
-    fullDesc: "As the director of HeartBeats, I lead a program that brings the healing power of music to those who need it most. This role has taught me about servant leadership, program management, and the profound impact that arts can have on community wellbeing.",
-    highlights: ["Program Leadership", "Community Impact", "Team Management"]
-  },
-  {
-    id: "asa-ambassador",
-    title: "ASA Ambassador",
-    category: "leadership",
-    icon: GraduationCap,
-    shortDesc: "Representing Arizona School for the Arts",
-    fullDesc: "As an ASA Ambassador, I represent our school to prospective students and families through campus tours and outreach events. This role allows me to share my passion for arts education and help others discover the unique opportunities at ASA.",
-    highlights: ["Campus Tours", "Student Outreach", "School Representation"]
-  },
   {
     id: "rise",
     title: "RISE",
     category: "leadership",
     icon: Users,
-    shortDesc: "Student empowerment in local policy",
-    fullDesc: "Through RISE, I engage in student empowerment initiatives focused on local policy and volunteering. This program has deepened my understanding of civic engagement and the importance of youth voices in shaping our communities.",
-    highlights: ["Policy Advocacy", "Volunteering", "Youth Empowerment"]
+    shortDesc: "Student empowerment and civic engagement",
+    fullDesc: "As co-president of Rise, I organize volunteer events and student empowerment initiatives focused on pressing social justice issues. Through advocacy for local policy, working directly with communities, and building leadership skills, this program has deepened my understanding of civic engagement and the importance of youth voices in shaping our futures. We have worked with St. Mary's Foodbank, Feed My Starving Children, the Welcome to America Project to organize over 20 volunteering opportunities, open to anyone. We have also corresponded with Arizona representatives on issues ranging from sex education policy to lobbying the Senate on 2022 Proposition 314.",
+    highlights: ["Policy Advocacy", "20+ Volunteer Events", "Youth Empowerment"]
   },
   {
     id: "stem-society",
@@ -68,37 +43,66 @@ const activities: Activity[] = [
     category: "leadership",
     icon: Sparkles,
     shortDesc: "Promoting STEM education and curiosity",
-    fullDesc: "As a member of STEM Society, I work to promote science, technology, engineering, and mathematics education among my peers. We organize events and activities that spark curiosity and make STEM accessible and exciting for all students.",
-    highlights: ["STEM Education", "Event Organization", "Peer Mentorship"]
+    fullDesc: "Having been passionate about science and technology topics from a young age, getting involved in STEM Society has been a rewarding way to explore my interests and share them with others. As president, I work to promote student interest in STEM through engaging activities, guest speakers, and student-led projects. Projects have spanned topics from earthquake preventative models to explore architecture, to data analysis of blood cells for an ongoing study on Cynomolgus monkeys to explore biology. Passionate about fostering female involvement in STEM, I also created a \"Coding is for Girls\" initiative, where I taught Java basics and vibe coding using AI, growing our membership from 12 to over 30.",
+    highlights: ["STEM Education", "Coding Initiative", "Membership Growth 12→30+"]
+  },
+  {
+    id: "heartbeats",
+    title: "HeartBEATS Director",
+    category: "leadership",
+    icon: Heart,
+    shortDesc: "Leading a community music initiative",
+    fullDesc: "As a director of HeartBeats, I lead a program that brings the healing power of music to those who need it most. Through the Welcome to America Project, HeartBEATS provides music lessons and free instruments to families in need. We also set up an instrument petting zoo at Welcome to America project events to allow children an opportunity to explore music while their parents obtain important resources. This role has taught me about leadership, program management, and the profound impact that arts can have on community wellbeing.",
+    highlights: ["Program Leadership", "Community Impact", "Instrument Drives"]
+  },
+  {
+    id: "model-un",
+    title: "Model United Nations",
+    category: "leadership",
+    icon: Globe,
+    shortDesc: "Diplomatic excellence and global awareness",
+    fullDesc: "As a model UN delegate, I have learned not only about global relations, how politics, economics, and innovation work together, but also valuable leadership skills as I navigated difficult negotiations with other countries, and the importance of professionalism and diplomatic communication. At the Sonoran Desert conference, I have won several awards, including the peer-voted Rapporteur award and the Best Diplomat award. I also participated in a collegiate conference in San Francisco, MUN Far West, where I received a Country Team award for best policy papers. As president of my school's MUN, I have learned how to teach valuable leadership skills, and how to communicate effectively, not just about policy, but about brainstorming, writing, and developing students' ideas.",
+    highlights: ["Best Diplomat Award", "Rapporteur Award", "MUN Far West Country Team Award"]
+  },
+  {
+    id: "asa-ambassador",
+    title: "ASA Ambassadors",
+    category: "leadership",
+    icon: GraduationCap,
+    shortDesc: "Representing Arizona School for the Arts",
+    fullDesc: "As an ASA Ambassador, I represent our school to prospective students and families through campus tours and outreach events. This role allows me to share my passion for arts education and help others discover the unique opportunities at ASA, as well as develop my public speaking and adaptability, as each family comes to tour with different questions, experiences and ideas. This has been an incredible way to learn professionalism in my presenting skills and I believe a skill that will serve me well in college and beyond.",
+    highlights: ["Campus Tours", "Public Speaking", "Student Outreach"]
   },
   {
     id: "science-opera",
     title: "Global Science Opera",
     category: "arts",
     icon: Globe,
-    shortDesc: "International collaborative arts project",
-    fullDesc: "The Global Science Opera project represents a unique intersection of science and art, bringing together students from around the world to create operatic works inspired by scientific themes. This experience has expanded my understanding of how art can communicate complex ideas across cultures.",
-    highlights: ["International Collaboration", "Science & Art Fusion", "Performance"],
-    mediaPlaceholder: true
+    shortDesc: "International collaborative arts & science project",
+    fullDesc: "The Global Science Opera is a global creative education initiative that showcases important STEM topics through an annual opera. Every year, scientists, arts institutions, and schools from around the world collaborate to create a culmination of creative works that embody science and culture in order to educate. ASA has participated in the GSO several times, and in 2023 and 2025, I helped create a soundtrack for the Opera. These experiences vastly expanded my understanding of what it means to collaborate and create, empowering me to explore new media and share knowledge in new ways.\n\nGSO 2023 — \"Unfold the Universe\": I focused on Proxima Centauri B, an Earth-sized exoplanet orbiting our closest neighboring star. I composed a graphic score using color, symbols, and shapes to represent the planet's tidal lock—one side in perpetual sun, the other in perpetual darkness. The score was performed live by an ASA ensemble and uses a musical cryptogram where each letter of \"Proxima Centauri B\" was assigned a musical note.\n\nGSO 2025 — \"H2O\": I composed an ambient soundscape based on a poem titled \"Dead Ice\" by Norwegian student Kai Greig, about glacial conservation. I used laser and synthesizer effects to simulate ice cracking, with layered chords and building motifs to represent the increasing danger of global warming.",
+    highlights: ["GSO 2023 & 2025", "Graphic Score Composition", "International Collaboration"],
+    mediaPlaceholder: true,
+    link: "https://globalscienceopera.com/",
+    linkLabel: "Visit the GSO Website"
   },
   {
     id: "chamber-choir",
-    title: "Chamber Choir",
+    title: "Chamber Singers",
     category: "arts",
     icon: Mic,
     shortDesc: "Vocal excellence and ensemble performance",
-    fullDesc: "As a member of Chamber Choir, I've honed my vocal skills while learning the art of ensemble performance. The discipline of choral singing has taught me about harmony—both musical and interpersonal—and the beauty of voices coming together as one.",
-    highlights: ["Vocal Performance", "Ensemble Work", "Musical Growth"],
+    fullDesc: "As a member of Chamber Singers, I have learned what it means to be a part of an advanced ensemble. From the accelerated pace of repertoire learning to the group's vast talent, I have been pushed out of my comfort zone and grown tremendously as a singer. As an ensemble, we have performed for arts fundraisers, community jazz clubs, and even traveled to Flagstaff for the AMEA jazz/madrigal competition, where we received the highest rank, superior with distinction.",
+    highlights: ["AMEA Superior with Distinction", "Jazz & Madrigal", "Arts Fundraisers"],
     mediaPlaceholder: true
   },
   {
     id: "visual-arts",
-    title: "Visual Arts Portfolio",
+    title: "Personal Creative Portfolio",
     category: "arts",
     icon: Palette,
-    shortDesc: "Paintings and musical compositions",
-    fullDesc: "My visual arts portfolio represents years of exploration across various media, from painting to digital art. Each piece reflects my journey of self-expression and my belief that visual art can communicate emotions and ideas that words cannot capture.",
-    highlights: ["Paintings", "Musical Compositions", "Creative Expression"],
+    shortDesc: "Paintings, songwriting, and poetry",
+    fullDesc: "My personal portfolio represents years of exploration across various media, from painting to songwriting to poetry. Each piece reflects my journey of self-expression and my belief that art can communicate the incomprehensible.",
+    highlights: ["Painting", "Songwriting", "Poetry"],
     mediaPlaceholder: true
   }
 ];
@@ -253,7 +257,7 @@ export default function ExtracurricularSection() {
                   </button>
                 </DialogTrigger>
                 
-                <DialogContent className="bg-[#1A0A2E] border-[#00FFFF]/20 text-white max-w-lg">
+                <DialogContent className="bg-[#1A0A2E] border-[#00FFFF]/20 text-white max-w-lg max-h-[85vh] overflow-y-auto">
                   <DialogHeader>
                     <div className={`w-14 h-14 rounded-xl mb-4 flex items-center justify-center ${
                       activity.category === "leadership" 
@@ -282,7 +286,7 @@ export default function ExtracurricularSection() {
                       </div>
                     </div>
 
-                    <p className="font-body text-white/80 leading-relaxed">
+                    <p className="font-body text-white/80 leading-relaxed whitespace-pre-line">
                       {activity.fullDesc}
                     </p>
                     
@@ -298,14 +302,17 @@ export default function ExtracurricularSection() {
                         ))}
                       </div>
                     )}
-                    
-                    {activity.mediaPlaceholder && (
-                      <div className="mt-4 p-6 rounded-xl bg-white/5 border border-white/10 text-center">
-                        <ExternalLink className="w-8 h-8 mx-auto mb-2 text-white/40" />
-                        <p className="font-accent text-sm text-white/50">
-                          Media content coming soon
-                        </p>
-                      </div>
+
+                    {activity.link && (
+                      <a
+                        href={activity.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-[#00FFFF] font-accent text-sm hover:underline mt-2"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        {activity.linkLabel || activity.link}
+                      </a>
                     )}
                   </div>
                 </DialogContent>

@@ -125,11 +125,7 @@ export default function CapstoneSection() {
                   Assessing the Environmental Impacts of AI
                 </p>
                 <p className="font-body text-[#37474F] leading-relaxed mb-6">
-                  In a world rapidly changing with the development of artificial intelligence, it can be 
-                  difficult to accurately assess the environmental and political changes that come along 
-                  with it. This policy brief reviews the most common concerns about AI's environmental 
-                  impact—including water usage and electricity consumption—to propose effective policy 
-                  solutions that support clean energy implementation.
+                  In a world rapidly changing with the development of artificial intelligence, it can be difficult to accurately assess the environmental and political changes that accompany it. This policy brief reviews the most common concerns about AI's environmental impact, including water usage and electricity consumption, to propose effective policy solutions that support clean energy implementation.
                 </p>
                 
                 <div className="flex flex-wrap gap-3">
@@ -233,7 +229,7 @@ export default function CapstoneSection() {
                     Creative Companion Piece
                   </h3>
                   <p className="font-body text-[#37474F] leading-relaxed mb-6">
-                    A picture book or song exploring the themes of AI and environmental sustainability
+                    Expressing my creativity alongside my academics has been an incredibly fulfilling way to express my ideas and thoughts as I learn more about the world and my place in it. At ASA, I sing in the Chamber choir, play classical guitar in the World Guitar ensemble, and have taken classical music composition classes. These experiences have greatly influenced my artistic style. For my capstone project, I created a song to accompany my policy statement. With the purpose of calling out the artificial constraints placed on innovation and equity by those in power, this song emphasizes the importance of community strength and the risks of staying isolated and silent in the face of corruption.
                   </p>
                   
                   <Dialog>
