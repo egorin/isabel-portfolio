@@ -78,7 +78,7 @@ export default function LandingSection({ onEnter }: LandingSectionProps) {
           transition={{ duration: 1, delay: 0.8 }}
           className="font-body text-xl md:text-2xl text-white/90 mb-12 max-w-2xl mx-auto drop-shadow-md"
         >
-          Artist • Scholar • Leader • Changemaker
+          
         </motion.p>
 
         {/* Enter Prompt */}
