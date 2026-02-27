@@ -112,7 +112,7 @@ export default function AboutSection() {
               
               <div className="space-y-3 font-body text-sm text-[#5D3A3A]/90 leading-relaxed">
                 <p>
-                  My name is Isabel Gorin, and I am a high school senior attending Arizona School for the Arts, where I've spent the past 7 years exploring my creativity, leadership, and academic passions. At ASA, I have participated in several clubs and activities.
+                  I am a high school senior attending Arizona School for the Arts, where I've spent the past 7 years exploring my creativity, leadership, and academic passions. At ASA, I have participated in several clubs and activities.
                 </p>
                 
                 <p>
