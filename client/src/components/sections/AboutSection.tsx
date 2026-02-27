@@ -82,19 +82,19 @@ export default function AboutSection() {
           >
             <div className="relative">
               {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#FFB5BA] to-[#FFE4B5] rounded-full blur-2xl opacity-60 scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#FFB5BA] to-[#FFE4B5] rounded-3xl blur-2xl opacity-60 scale-105" />
               
-              {/* Profile image with glass frame */}
-              <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden glass-card p-2">
+              {/* Profile image with glass frame - larger rectangular */}
+              <div className="relative w-80 h-96 md:w-96 md:h-[500px] rounded-3xl overflow-hidden glass-card p-2">
                 <img 
                   src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663078358779/jzlcpqOHqROkyCDn.jpeg" 
                   alt="Isabel Gorin"
-                  className="w-full h-full rounded-full object-cover"
+                  className="w-full h-full rounded-2xl object-cover"
                 />
               </div>
               
-              {/* Decorative ring */}
-              <div className="absolute -inset-4 border-2 border-white/30 rounded-full" />
+              {/* Decorative border */}
+              <div className="absolute -inset-3 border-2 border-white/30 rounded-3xl" />
             </div>
           </motion.div>
 
@@ -112,41 +112,23 @@ export default function AboutSection() {
               
               <div className="space-y-4 font-body text-[#5D3A3A]/90 leading-relaxed">
                 <p>
-                  My name is Isabel Gorin, and I am a high school senior attending Arizona School for the Arts, where I've spent the past 7 years exploring my creativity, leadership, and academic passions. At ASA, I have participated in several clubs and activities.
+                  I am a high school senior at Arizona School for the Arts, where I've spent the past 7 years exploring creativity, leadership, and academic passions through clubs like RISE, HeartBEATS, STEM Society, Mu Alpha Theta, and Model UN.
                 </p>
                 
                 <p>
-                  In 9th grade, curious about social justice issues, I ran for president of ASA's volunteer club, RISE. As the president since 10th grade, I have organized over 20 volunteering events and expanded the club's mission to include local advocacy to engage students in civil service.
+                  As president of RISE since 10th grade, I've organized over 20 volunteering events and expanded our mission to include local advocacy. My involvement with HeartBEATS, where I serve as Program Director, has deepened my commitment to service—coordinating instrument drives and petting zoos that connect refugee families with music.
                 </p>
                 
                 <p>
-                  My success with RISE encouraged me to get involved in a student-run organization called HeartBEATS, where we connect local refugees with musical instruments. Since joining, I have worked my way up to Program Director and have coordinated instrument drives for our instrument petting zoos, where children of refugee families can engage with musical instruments. HeartBEATS has taught me the meaning of service and the impact on local communities, informing my future goals.
+                  Leading STEM Society, I created a coding initiative teaching Java and AI-powered Vibe coding, growing membership from 12 to over 30 students. As co-leader of Mu Alpha Theta, I provide tutoring and organize our math olympiad. Through Model UN, I've developed diplomacy and negotiation skills that sparked my passion for the intersection of STEM and policymaking.
                 </p>
                 
                 <p>
-                  In 10th grade, I began leading my school's STEM Society club, fostering student involvement in STEM outside the classroom; I created a coding initiative, where I taught Java basics and Vibe coding using AI, growing our membership from 12 to over 30. I also co-lead my school's Mu Alpha Theta math honors society, working with both middle and high school students within ASA to provide tutoring and engagement through our math olympiad.
-                </p>
-                
-                <p>
-                  Finally, through Model UN, I have learned valuable leadership skills through diplomacy and negotiation, sparking my passion for the intersection between STEM and policymaking. These experiences have shaped my career aspirations. In college, I plan to study policy and international relations, hoping to get involved in environmental and social justice through political reform. With this passion in mind, in my senior capstone project, I wrote about the environmental impacts of AI, an issue close to my heart, and one I feel is crucial to today's social and technological development.
+                  These experiences have shaped my career aspirations: studying policy and international relations in college to advance environmental and social justice through political reform. My senior capstone project explores the environmental impacts of AI—an issue close to my heart and crucial to today's social and technological development.
                 </p>
               </div>
 
-              {/* Quick Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-[#C65D3B]/20">
-                <div className="text-center">
-                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">7</p>
-                  <p className="font-accent text-sm text-[#5D3A3A]/70">Years at ASA</p>
-                </div>
-                <div className="text-center">
-                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">20+</p>
-                  <p className="font-accent text-sm text-[#5D3A3A]/70">Events Organized</p>
-                </div>
-                <div className="text-center">
-                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">∞</p>
-                  <p className="font-accent text-sm text-[#5D3A3A]/70">Curiosity</p>
-                </div>
-              </div>
+
             </div>
           </motion.div>
         </div>
