@@ -119,7 +119,7 @@ export default function CapstoneSection() {
               {/* Text Content */}
               <div>
                 <h3 className="font-display text-2xl md:text-3xl font-semibold text-[#1565C0] mb-4">
-                  What No One Knows About the Future of AI and Sustainability
+                  What No One Understands About the Future of AI and Sustainability
                 </h3>
                 <p className="font-accent text-sm text-[#2E7D32] mb-4">
                   Assessing the Environmental Impacts of AI
