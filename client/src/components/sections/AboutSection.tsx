@@ -84,16 +84,13 @@ export default function AboutSection() {
               {/* Glow effect behind image */}
               <div className="absolute inset-0 bg-gradient-to-br from-[#FFB5BA] to-[#FFE4B5] rounded-full blur-2xl opacity-60 scale-110" />
               
-              {/* Profile placeholder with glass frame */}
+              {/* Profile image with glass frame */}
               <div className="relative w-72 h-72 md:w-80 md:h-80 rounded-full overflow-hidden glass-card p-2">
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-[#FFDAB9] to-[#FFB5BA] flex items-center justify-center">
-                  <div className="text-center text-[#5D3A3A]/70">
-                    <svg className="w-24 h-24 mx-auto mb-2 opacity-50" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                    </svg>
-                    <p className="font-accent text-sm">Photo Coming Soon</p>
-                  </div>
-                </div>
+                <img 
+                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663078358779/jzlcpqOHqROkyCDn.jpeg" 
+                  alt="Isabel Gorin"
+                  className="w-full h-full rounded-full object-cover"
+                />
               </div>
               
               {/* Decorative ring */}
@@ -110,41 +107,40 @@ export default function AboutSection() {
           >
             <div className="glass-card p-8 md:p-10">
               <h3 className="font-display text-2xl md:text-3xl font-semibold text-[#5D3A3A] mb-6">
-                Hello, I'm Isabel
+                Hello, I'm Isabel Gorin
               </h3>
               
               <div className="space-y-4 font-body text-[#5D3A3A]/90 leading-relaxed">
                 <p>
-                  I'm a senior at the Arizona School for the Arts, where I've spent the past four years 
-                  exploring the intersection of creativity, leadership, and academic excellence. My journey 
-                  has been defined by a passion for making meaningful change—whether through the arts, 
-                  civic engagement, or environmental advocacy.
+                  My name is Isabel Gorin, and I am a high school senior attending Arizona School for the Arts, where I've spent the past 7 years exploring my creativity, leadership, and academic passions. At ASA, I have participated in several clubs and activities.
                 </p>
                 
                 <p>
-                  As someone who believes deeply in the power of interdisciplinary thinking, I've found 
-                  ways to connect my love for music and visual arts with my commitment to addressing 
-                  pressing global challenges. My Senior Capstone project on AI sustainability represents 
-                  this synthesis—examining how emerging technology intersects with environmental responsibility.
+                  In 9th grade, curious about social justice issues, I ran for president of ASA's volunteer club, RISE. As the president since 10th grade, I have organized over 20 volunteering events and expanded the club's mission to include local advocacy to engage students in civil service.
                 </p>
                 
                 <p>
-                  Beyond academics, I've had the privilege of leading initiatives that bring communities 
-                  together, from directing HeartBeats to representing my school as an ASA Ambassador. 
-                  Each experience has shaped my understanding of what it means to be both an artist and 
-                  an advocate.
+                  My success with RISE encouraged me to get involved in a student-run organization called HeartBEATS, where we connect local refugees with musical instruments. Since joining, I have worked my way up to Program Director and have coordinated instrument drives for our instrument petting zoos, where children of refugee families can engage with musical instruments. HeartBEATS has taught me the meaning of service and the impact on local communities, informing my future goals.
+                </p>
+                
+                <p>
+                  In 10th grade, I began leading my school's STEM Society club, fostering student involvement in STEM outside the classroom; I created a coding initiative, where I taught Java basics and Vibe coding using AI, growing our membership from 12 to over 30. I also co-lead my school's Mu Alpha Theta math honors society, working with both middle and high school students within ASA to provide tutoring and engagement through our math olympiad.
+                </p>
+                
+                <p>
+                  Finally, through Model UN, I have learned valuable leadership skills through diplomacy and negotiation, sparking my passion for the intersection between STEM and policymaking. These experiences have shaped my career aspirations. In college, I plan to study policy and international relations, hoping to get involved in environmental and social justice through political reform. With this passion in mind, in my senior capstone project, I wrote about the environmental impacts of AI, an issue close to my heart, and one I feel is crucial to today's social and technological development.
                 </p>
               </div>
 
               {/* Quick Stats */}
               <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-[#C65D3B]/20">
                 <div className="text-center">
-                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">4+</p>
+                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">7</p>
                   <p className="font-accent text-sm text-[#5D3A3A]/70">Years at ASA</p>
                 </div>
                 <div className="text-center">
-                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">5+</p>
-                  <p className="font-accent text-sm text-[#5D3A3A]/70">Leadership Roles</p>
+                  <p className="font-display text-3xl font-semibold text-[#C65D3B]">20+</p>
+                  <p className="font-accent text-sm text-[#5D3A3A]/70">Events Organized</p>
                 </div>
                 <div className="text-center">
                   <p className="font-display text-3xl font-semibold text-[#C65D3B]">∞</p>
