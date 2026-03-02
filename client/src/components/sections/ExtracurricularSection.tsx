@@ -66,7 +66,8 @@ const activities: Activity[] = [
     icon: Globe,
     shortDesc: "Diplomatic excellence and global awareness",
     fullDesc: "As a model UN delegate, I have learned not only about global relations, how politics, economics, and innovation work together, but also valuable leadership skills as I navigated difficult negotiations with other countries, and the importance of professionalism and diplomatic communication. At the Sonoran Desert conference, I have won several awards, including the peer-voted Rapporteur award and the Best Diplomat award. I also participated in a collegiate conference in San Francisco, MUN Far West, where I received a Country Team award for best policy papers. As president of my school's MUN, I have learned how to teach valuable leadership skills, and how to communicate effectively, not just about policy, but about brainstorming, writing, and developing students' ideas.",
-    highlights: ["Best Diplomat Award", "Rapporteur Award", "MUN Far West Country Team Award"]
+    highlights: ["Best Diplomat Award", "Rapporteur Award", "MUN Far West Country Team Award"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/IMG_5137_1595bfba.jpeg"
   },
   {
     id: "asa-ambassador",
