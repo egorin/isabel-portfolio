@@ -100,14 +100,13 @@ const activities: Activity[] = [
     mediaPlaceholder: true
   },
   {
-    id: "visual-arts",
-    title: "Personal Creative Portfolio",
-    category: "arts",
-    icon: Palette,
-    shortDesc: "Paintings, songwriting, and poetry",
-    fullDesc: "My personal portfolio represents years of exploration across various media, from painting to songwriting to poetry. Each piece reflects my journey of self-expression and my belief that art can communicate the incomprehensible.",
-    highlights: ["Painting", "Songwriting", "Poetry"],
-    mediaPlaceholder: true
+    id: "mu-alpha-theta",
+    title: "Mu Alpha Theta",
+    category: "leadership",
+    icon: BookOpen,
+    shortDesc: "Math Honors Society officer and tutor",
+    fullDesc: "As an officer of Mu Alpha Theta (Math Honors Society), and a second year member, I have learned how to reconnect with my passion for mathematics outside of the classroom. Tutoring has been not only a great way of practicing skills and strengthening understanding, but it has also been invaluable at my school. Students can go to another student directly, who may have different and more helpful methods of teaching than a teacher. Also, through explorations of the origin of fascinating math concepts, or creative projects that combine mathematics and the arts, it has taught me the creative side of math, and been a deeply enjoyable part of my high school experience.",
+    highlights: ["Math Honors Society", "Peer Tutoring", "Math & Arts Projects"]
   }
 ];
 
