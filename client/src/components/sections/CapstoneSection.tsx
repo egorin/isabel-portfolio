@@ -237,7 +237,7 @@ export default function CapstoneSection() {
                     asChild
                   >
                     <a
-                      href="https://docs.google.com/document/d/1x269xsyefOGBikOqoFOI5clf_mYMV89Ar7OgQQSDfV8/edit?tab=t.0"
+                      href="https://docs.google.com/viewer?url=https%3A%2F%2Fd2xsxph8kpxj0f.cloudfront.net%2F310519663078358779%2FdzAvsv2VFQWwzWaFUEjKgc%2FIsabelGorin-CapstoneArtist%27sStatement_a763ca21.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
