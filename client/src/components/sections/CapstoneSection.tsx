@@ -145,7 +145,7 @@ export default function CapstoneSection() {
                         </DialogTitle>
                       </DialogHeader>
                       <iframe
-                        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/SeniorCapstone(1)-IsabelGorin_fb7fef37.pdf"
+                        src="https://docs.google.com/viewer?url=https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/SeniorCapstone(1)-IsabelGorin_fb7fef37.pdf&embedded=true"
                         className="w-full h-full rounded-lg"
                         title="Senior Capstone Policy Brief"
                       />
