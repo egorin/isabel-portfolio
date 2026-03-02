@@ -22,6 +22,7 @@ interface Activity {
   fullDesc: string;
   highlights?: string[];
   mediaPlaceholder?: boolean;
+  image?: string;
   link?: string;
   linkLabel?: string;
   extraContent?: React.ReactNode;
@@ -53,7 +54,10 @@ const activities: Activity[] = [
     icon: Heart,
     shortDesc: "Leading a community music initiative",
     fullDesc: "As a director of HeartBeats, I lead a program that brings the healing power of music to those who need it most. Through the Welcome to America Project, HeartBEATS provides music lessons and free instruments to families in need. We also set up an instrument petting zoo at Welcome to America project events to allow children an opportunity to explore music while their parents obtain important resources. This role has taught me about leadership, program management, and the profound impact that arts can have on community wellbeing.",
-    highlights: ["Program Leadership", "Community Impact", "Instrument Drives"]
+    highlights: ["Program Leadership", "Community Impact", "Instrument Drives"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/Screenshot2026-02-18at11.51.21AM_e33b8d5b.JPEG",
+    link: "https://www.heartbeatsaz.org/",
+    linkLabel: "Visit the HeartBEATS Website"
   },
   {
     id: "model-un",
@@ -274,17 +278,25 @@ export default function ExtracurricularSection() {
                   </DialogHeader>
                   
                   <div className="space-y-4">
-                    {/* Image Placeholder */}
-                    <div 
-                      className="w-full aspect-video rounded-xl flex items-center justify-center text-center p-6"
-                      style={{ background: "linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 16, 240, 0.1) 100%)" }}
-                    >
-                      <div>
-                        <Palette className="w-8 h-8 mx-auto mb-2 text-white/40" />
-                        <p className="font-body text-sm text-white/50">Activity Image</p>
-                        <p className="font-body text-xs text-white/30">Add image for {activity.title}</p>
+                    {/* Image */}
+                    {activity.image ? (
+                      <img
+                        src={activity.image}
+                        alt={activity.title}
+                        className="w-full aspect-video object-cover rounded-xl"
+                      />
+                    ) : (
+                      <div 
+                        className="w-full aspect-video rounded-xl flex items-center justify-center text-center p-6"
+                        style={{ background: "linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 16, 240, 0.1) 100%)" }}
+                      >
+                        <div>
+                          <Palette className="w-8 h-8 mx-auto mb-2 text-white/40" />
+                          <p className="font-body text-sm text-white/50">Activity Image</p>
+                          <p className="font-body text-xs text-white/30">Add image for {activity.title}</p>
+                        </div>
                       </div>
-                    </div>
+                    )}
 
                     <p className="font-body text-white/80 leading-relaxed whitespace-pre-line">
                       {activity.fullDesc}
