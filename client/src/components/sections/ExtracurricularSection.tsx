@@ -38,7 +38,8 @@ const activities: Activity[] = [
     icon: Users,
     shortDesc: "Student empowerment and civic engagement",
     fullDesc: "As co-president of Rise, I organize volunteer events and student empowerment initiatives focused on pressing social justice issues. Through advocacy for local policy, working directly with communities, and building leadership skills, this program has deepened my understanding of civic engagement and the importance of youth voices in shaping our futures. We have worked with St. Mary's Foodbank, Feed My Starving Children, the Welcome to America Project to organize over 20 volunteering opportunities, open to anyone. We have also corresponded with Arizona representatives on issues ranging from sex education policy to lobbying the Senate on 2022 Proposition 314.",
-    highlights: ["Policy Advocacy", "20+ Volunteer Events", "Youth Empowerment"]
+    highlights: ["Policy Advocacy", "20+ Volunteer Events", "Youth Empowerment"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/image(2)_ba4323fd.jpeg"
   },
   {
     id: "stem-society",
