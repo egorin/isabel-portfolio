@@ -165,11 +165,10 @@ export default function CapstoneSection() {
                 </div>
               </div>
 
-              {/* Visual */}
+                {/* Visual */}
               <div className="relative">
-                {/* EDITABLE: Replace this CDN URL with your own image */}
                 <img 
-                  src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663078358779/HmHVloUHZvIGKORg.png" 
+                  src="https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/1_1b4c2018.png" 
                   alt="AI and Sustainability Visualization"
                   className="w-full rounded-2xl shadow-lg"
                 />
