@@ -23,6 +23,8 @@ interface Activity {
   highlights?: string[];
   mediaPlaceholder?: boolean;
   image?: string;
+  video?: string;
+  videoLabel?: string;
   link?: string;
   linkLabel?: string;
   extraContent?: React.ReactNode;
@@ -84,9 +86,11 @@ const activities: Activity[] = [
     category: "arts",
     icon: Globe,
     shortDesc: "International collaborative arts & science project",
-    fullDesc: "The Global Science Opera is a global creative education initiative that showcases important STEM topics through an annual opera. Every year, scientists, arts institutions, and schools from around the world collaborate to create a culmination of creative works that embody science and culture in order to educate. ASA has participated in the GSO several times, and in 2023 and 2025, I helped create a soundtrack for the Opera. These experiences vastly expanded my understanding of what it means to collaborate and create, empowering me to explore new media and share knowledge in new ways.\n\nGSO 2023 — \"Unfold the Universe\": I focused on Proxima Centauri B, an Earth-sized exoplanet orbiting our closest neighboring star. I composed a graphic score using color, symbols, and shapes to represent the planet's tidal lock—one side in perpetual sun, the other in perpetual darkness. The score was performed live by an ASA ensemble and uses a musical cryptogram where each letter of \"Proxima Centauri B\" was assigned a musical note.\n\nGSO 2025 — \"H2O\": I composed an ambient soundscape based on a poem titled \"Dead Ice\" by Norwegian student Kai Greig, about glacial conservation. I used laser and synthesizer effects to simulate ice cracking, with layered chords and building motifs to represent the increasing danger of global warming.",
+    fullDesc: "The Global Science Opera is a global creative education initiative that showcases important STEM topics through an annual opera. Every year, scientists, arts institutions, and schools from around the world collaborate to create a culmination of creative works that embody science and culture in order to educate. ASA has participated in the GSO several times, and in 2023 and 2025, I helped create a soundtrack for the Opera. These experiences vastly expanded my understanding of what it means to collaborate and create, empowering me to explore new media and share knowledge in new ways.\n\nGSO 2023, \"Unfold the Universe\": I focused on Proxima Centauri B, an Earth-sized exoplanet orbiting our closest neighboring star. I composed a graphic score using color, symbols, and shapes to represent the planet's tidal lock, one side in perpetual sun, the other in perpetual darkness. The score was performed live by an ASA ensemble and uses a musical cryptogram where each letter of \"Proxima Centauri B\" was assigned a musical note.\n\nGSO 2025, \"H2O\": I composed an ambient soundscape based on a poem titled \"Dead Ice\" by Norwegian student Kai Greig, about glacial conservation. I used laser and synthesizer effects to simulate ice cracking, with layered chords and building motifs to represent the increasing danger of global warming.",
     highlights: ["GSO 2023 & 2025", "Graphic Score Composition", "International Collaboration"],
     image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/proxima_centauri_b_rotated_26768c61.png",
+    video: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/DeadIceLogo(1)_b5abb1ba.mp4",
+    videoLabel: "Watch: GSO 2025 Dead Ice",
     link: "https://globalscienceopera.com/",
     linkLabel: "Visit the GSO Website"
   },
@@ -283,7 +287,7 @@ export default function ExtracurricularSection() {
                       <img
                         src={activity.image}
                         alt={activity.title}
-                        className="w-full aspect-video object-cover rounded-xl"
+                        className="w-3/4 mx-auto object-cover rounded-xl"
                       />
                     ) : (
                       <div 
@@ -312,6 +316,17 @@ export default function ExtracurricularSection() {
                             {highlight}
                           </span>
                         ))}
+                      </div>
+                    )}
+
+                    {activity.video && (
+                      <div>
+                        <p className="font-accent text-xs text-white/50 mb-2 uppercase tracking-wider">{activity.videoLabel || "Video"}</p>
+                        <video
+                          src={activity.video}
+                          controls
+                          className="w-full rounded-xl"
+                        />
                       </div>
                     )}
 
