@@ -264,17 +264,16 @@ export default function CapstoneSection() {
                   </Dialog>
                 </div>
 
-                {/* Image Placeholder */}
+                {/* Music Video */}
                 <div className="relative">
-                  <div 
-                    className="w-full rounded-2xl shadow-lg flex items-center justify-center text-center p-8"
-                    style={{ background: "linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%)", aspectRatio: "4/3" }}
+                  <video
+                    controls
+                    className="w-full rounded-2xl shadow-lg"
+                    style={{ aspectRatio: "16/9" }}
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/MyMovie_9a4aac74.mp4"
                   >
-                    <div>
-                      <p className="font-display text-xl text-[#2E7D32] mb-2">Companion Piece Image</p>
-                      <p className="font-body text-sm text-[#558B2F]">Replace /images/companion-piece-placeholder.png with your image</p>
-                    </div>
-                  </div>
+                    Your browser does not support the video element.
+                  </video>
                   <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-[#98FF98] to-[#87CEEB] rounded-full opacity-50 blur-xl" />
                 </div>
               </div>
