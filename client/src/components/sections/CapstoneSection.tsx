@@ -229,7 +229,7 @@ export default function CapstoneSection() {
                     Creative Companion Piece
                   </h3>
                   <p className="font-body text-[#37474F] leading-relaxed mb-6">
-                    Expressing my creativity alongside my academics has been an incredibly fulfilling way to express my ideas and thoughts as I learn more about the world and my place in it. At ASA, I sing in the Chamber choir, play classical guitar in the World Guitar ensemble, and have taken classical music composition classes. These experiences have greatly influenced my artistic style. For my capstone project, I created a song to accompany my policy statement. With the purpose of calling out the artificial constraints placed on innovation and equity by those in power, this song emphasizes the importance of community strength and the risks of staying isolated and silent in the face of corruption.
+                    Expressing my creativity alongside my academics has been an incredibly fulfilling way to express my ideas and thoughts as I learn more about the world and my place in it. At ASA, I sing in the Chamber choir, play classical guitar in the World Guitar ensemble, and have taken classical music composition classes. These experiences have greatly influenced my artistic style. For my capstone project, I created “Artificial Constraint” to accompany my policy statement. With the purpose of calling out the artificial constraints placed on innovation and equity by those in power, this song emphasizes the importance of community strength and the risks of staying isolated and silent in the face of corruption.
                   </p>
                   
                   <Dialog>
