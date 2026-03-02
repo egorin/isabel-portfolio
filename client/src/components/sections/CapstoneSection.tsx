@@ -232,36 +232,20 @@ export default function CapstoneSection() {
                     For my creative companion piece, I chose to write a song. Drawing from my foundation in choir and music composition, I created “Artificial Constraint” using Logic Pro. My inspiration for this song came from Penelope Scott’s “Rät”, a unique lyrical masterpiece that calls out Elon Musk and other tech giants for corruption. This was consistent with my vision for this project, which focuses on the “artificial constraints” imposed on innovation and sustainability by those in power. Specifically, I aim to speak directly to those in power and empower the millions of young people who will grow up facing the repercussions. Ultimately, this song is both a call to action and a playful portrayal of the absurdity of our political systems and the race for innovation. This is conveyed in the song’s dreamy, psychedelic tone and in the retro-futuristic collages that accompany it.
                   </p>
                   
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button 
-                        size="lg"
-                        className="bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-accent text-base px-8 py-6"
-                      >
-                        <Music className="w-5 h-5 mr-2" />
-                        Listen Now
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-md">
-                      <DialogHeader>
-                        <DialogTitle className="font-display text-xl">
-                          Creative Companion Piece
-                        </DialogTitle>
-                      </DialogHeader>
-                      <div className="space-y-4">
-                        <p className="text-sm text-muted-foreground">
-                          Audio file coming soon. Replace the src below with your audio file path.
-                        </p>
-                        <audio 
-                          controls 
-                          className="w-full"
-                          src="/audio/companion-piece.mp3"
-                        >
-                          Your browser does not support the audio element.
-                        </audio>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
+                  <Button 
+                    size="lg"
+                    className="bg-[#2E7D32] hover:bg-[#1B5E20] text-white font-accent text-base px-8 py-6"
+                    asChild
+                  >
+                    <a
+                      href="https://docs.google.com/document/d/1x269xsyefOGBikOqoFOI5clf_mYMV89Ar7OgQQSDfV8/edit?tab=t.0"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-5 h-5 mr-2" />
+                      Artist's Statement
+                    </a>
+                  </Button>
                 </div>
 
                 {/* Music Video */}
