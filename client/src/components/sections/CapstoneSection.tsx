@@ -145,7 +145,7 @@ export default function CapstoneSection() {
                         </DialogTitle>
                       </DialogHeader>
                       <iframe
-                        src="/Senior_Capstone_Isabel_Gorin.pdf"
+                        src="https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/SeniorCapstone(1)-IsabelGorin_fb7fef37.pdf"
                         className="w-full h-full rounded-lg"
                         title="Senior Capstone Policy Brief"
                       />
@@ -157,7 +157,7 @@ export default function CapstoneSection() {
                     className="border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32]/10 font-accent"
                     asChild
                   >
-                    <a href="/Senior_Capstone_Isabel_Gorin.pdf" download>
+                    <a href="https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/SeniorCapstone(1)-IsabelGorin_fb7fef37.pdf" download>
                       <Download className="w-4 h-4 mr-2" />
                       Download PDF
                     </a>
