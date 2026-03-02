@@ -242,7 +242,7 @@ export default function CapstoneSection() {
                       rel="noopener noreferrer"
                     >
                       <ExternalLink className="w-5 h-5 mr-2" />
-                      Artist's Statement
+                      Read full Artist's Statement
                     </a>
                   </Button>
                 </div>
