@@ -97,7 +97,7 @@ const activities: Activity[] = [
     shortDesc: "Vocal excellence and ensemble performance",
     fullDesc: "As a member of Chamber Singers, I have learned what it means to be a part of an advanced ensemble. From the accelerated pace of repertoire learning to the group's vast talent, I have been pushed out of my comfort zone and grown tremendously as a singer. As an ensemble, we have performed for arts fundraisers, community jazz clubs, and even traveled to Flagstaff for the AMEA jazz/madrigal competition, where we received the highest rank, superior with distinction.",
     highlights: ["AMEA Superior with Distinction", "Jazz & Madrigal", "Arts Fundraisers"],
-    mediaPlaceholder: true
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/E8F69302-4CC2-4760-8E95-18C45CA48D21_3b2d72f0.JPG"
   },
   {
     id: "mu-alpha-theta",
