@@ -48,7 +48,8 @@ const activities: Activity[] = [
     icon: Sparkles,
     shortDesc: "Promoting STEM education and curiosity",
     fullDesc: "Having been passionate about science and technology topics from a young age, getting involved in STEM Society has been a rewarding way to explore my interests and share them with others. As president, I work to promote student interest in STEM through engaging activities, guest speakers, and student-led projects. Projects have spanned topics from earthquake preventative models to explore architecture, to data analysis of blood cells for an ongoing study on Cynomolgus monkeys to explore biology. Passionate about fostering female involvement in STEM, I also created a \"Coding is for Girls\" initiative, where I taught Java basics and vibe coding using AI, growing our membership from 12 to over 30.",
-    highlights: ["STEM Education", "Coding Initiative", "Membership Growth 12→30+"]
+    highlights: ["STEM Education", "Coding Initiative", "Membership Growth 12→30+"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/Screenshot2026-03-02at11.26.35AM_456b50bb.png"
   },
   {
     id: "heartbeats",
@@ -79,7 +80,8 @@ const activities: Activity[] = [
     icon: GraduationCap,
     shortDesc: "Representing Arizona School for the Arts",
     fullDesc: "As an ASA Ambassador, I represent our school to prospective students and families through campus tours and outreach events. This role allows me to share my passion for arts education and help others discover the unique opportunities at ASA, as well as develop my public speaking and adaptability, as each family comes to tour with different questions, experiences and ideas. This has been an incredible way to learn professionalism in my presenting skills and I believe a skill that will serve me well in college and beyond.",
-    highlights: ["Campus Tours", "Public Speaking", "Student Outreach"]
+    highlights: ["Campus Tours", "Public Speaking", "Student Outreach"],
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/image(2)_0d78af17.png"
   },
   {
     id: "science-opera",
