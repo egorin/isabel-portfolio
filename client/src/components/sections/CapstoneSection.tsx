@@ -157,7 +157,7 @@ export default function CapstoneSection() {
                     className="border-[#2E7D32] text-[#2E7D32] hover:bg-[#2E7D32]/10 font-accent"
                     asChild
                   >
-                    <a href="https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/Holistically_Evaluating_the_Environmental_Impact_o_7d366798.pdf" target="_blank" rel="noopener noreferrer">
+                    <a href="https://docs.google.com/viewer?url=https://d2xsxph8kpxj0f.cloudfront.net/310519663078358779/dzAvsv2VFQWwzWaFUEjKgc/Holistically_Evaluating_the_Environmental_Impact_o_7d366798.pdf" target="_blank" rel="noopener noreferrer">
                       <ExternalLink className="w-4 h-4 mr-2" />
                       Scientific Article
                     </a>
